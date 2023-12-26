@@ -32,9 +32,13 @@ points = scatter(points, Vec3(3, 6, 3), 1, 2)
 
 place(points, 51, 1)
 
-points = scatter(points, Vec3(128, 10, 128), 6, 12)
-points = scatter(points, Vec3(20, 15, 20), 4, 10)
-points = scatter(points, Vec3(6, 6, 6), 3, 8)
+points = []
+for x in range(-120, 140, 20):
+    for z in range(-120, 140, 20):
+        points.append(Vec3(x, 60, z))
+
+points = scatter(points, Vec3(30, 15, 30), 1, 4)
+points = scatter(points, Vec3(6, 8, 6), 3, 5)
 points = scatter(points, Vec3(3, 6, 3), 1, 2)
 
 place(points, 51, 1)
